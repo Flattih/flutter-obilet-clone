@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "81432796026",
+    "project_id": "obilet-7f010",
+    "storage_bucket": "obilet-7f010.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81432796026:android:9fd05451ba8cebcf0614c3",
+        "android_client_info": {
+          "package_name": "com.example.cashback"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81432796026-jpvjgchs9p6d63m5ldouj95vqctf10ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6hFmgUuvHllGLmONiYUWj7Ec7z46Rrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81432796026-jpvjgchs9p6d63m5ldouj95vqctf10ag.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "81432796026-j5uhvinnpno5ehner3urrag279oe0jl0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cashback"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
