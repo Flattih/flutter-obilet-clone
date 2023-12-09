@@ -1,16 +1,15 @@
-# cashback
+## Obilet Clone
 
-A new Flutter project.
+Full Stack Obilet Clone with Firebase Auth and NodeJS
 
-## Getting Started
+## Tech Used
 
-This project is a starting point for a Flutter application.
+Server: Node.js, Express, Mongoose
+Client: Flutter,Riverpod
 
-A few resources to get you started if this is your first Flutter project:
+## Youtube
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+If you want to see the application, I shot a [video](https://www.youtube.com/watch?v=9azx4AQIgUc) for you.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![obilet](https://github.com/Flattih/flutter-obilet-clone/assets/85228645/287bea8a-5304-4157-8e39-20ab1a983d41)
+
