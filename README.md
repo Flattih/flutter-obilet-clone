@@ -6,7 +6,7 @@ Full Stack Obilet Clone with Firebase Auth and NodeJS
 
 Server: Node.js, Express, Mongoose
 
-Client: Flutter,Riverpod
+Client: Flutter, Riverpod
 
 ## Youtube
 
