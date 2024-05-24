@@ -1,5 +1,6 @@
+import 'package:cashback/app_startup.dart';
 import 'package:cashback/core/extension/context_extension.dart';
-import 'package:cashback/core/providers/shared_pref_provider.dart';
+import 'package:cashback/core/constants/shared_pref_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -16,7 +17,7 @@ class _RememberMeCheckboxState extends ConsumerState<RememberMeCheckbox> {
   @override
   void initState() {
     super.initState();
-    _isChecked = ref.read(sharedPreferencesProvider).getBool(SharedKeys.rememberMe) ?? false;
+    _isChecked = ref.read(sharedPreferencesProvider).requireValue.getBool(SharedKeys.rememberMe) ?? false;
   }
 
   @override
@@ -29,7 +30,7 @@ class _RememberMeCheckboxState extends ConsumerState<RememberMeCheckbox> {
             fillColor: MaterialStateColor.resolveWith((states) => Colors.black),
             value: _isChecked,
             onChanged: (value) async {
-              await ref.read(sharedPreferencesProvider).setBool(SharedKeys.rememberMe, value!);
+              await ref.read(sharedPreferencesProvider).requireValue.setBool(SharedKeys.rememberMe, value!);
               setState(() {
                 _isChecked = value;
               });

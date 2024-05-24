@@ -1,4 +1,5 @@
-import 'package:cashback/core/providers/shared_pref_provider.dart';
+import 'package:cashback/app_startup.dart';
+import 'package:cashback/core/constants/shared_pref_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -73,7 +74,7 @@ class AppTheme extends StateNotifier<ThemeData> {
   );
 
   void getTheme() {
-    final theme = ref.watch(sharedPreferencesProvider).getString(SharedKeys.theme);
+    final theme = ref.watch(sharedPreferencesProvider).requireValue.getString(SharedKeys.theme);
 
     if (theme == ThemeMode.dark.name) {
       state = darkTheme;
@@ -84,10 +85,10 @@ class AppTheme extends StateNotifier<ThemeData> {
 
   void toggleTheme() async {
     if (state == darkTheme) {
-      await ref.watch(sharedPreferencesProvider).setString(SharedKeys.theme, ThemeMode.light.name);
+      await ref.watch(sharedPreferencesProvider).requireValue.setString(SharedKeys.theme, ThemeMode.light.name);
       state = lightTheme;
     } else {
-      await ref.watch(sharedPreferencesProvider).setString(SharedKeys.theme, ThemeMode.dark.name);
+      await ref.watch(sharedPreferencesProvider).requireValue.setString(SharedKeys.theme, ThemeMode.dark.name);
       state = darkTheme;
     }
   }

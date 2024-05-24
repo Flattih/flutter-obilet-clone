@@ -1,32 +1,19 @@
 import 'package:cashback/core/lang/language_manager.dart';
-import 'package:cashback/core/providers/shared_pref_provider.dart';
 import 'package:cashback/core/theme/app_theme.dart';
 import 'package:cashback/features/auth/notifiers/auth_controller.dart';
-import 'package:cashback/firebase_options.dart';
 import 'package:cashback/router.dart';
 import 'package:cashback/features/auth/widgets/auth_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> main() async {
+void main() {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  await EasyLocalization.ensureInitialized();
-  final sharedPreferences = await SharedPreferences.getInstance();
-
   runApp(
     ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-      ],
       child: LanguageManager(
         child: const MyApp(),
       ),
