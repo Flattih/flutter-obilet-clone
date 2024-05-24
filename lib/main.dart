@@ -1,3 +1,4 @@
+import 'package:cashback/app_startup.dart';
 import 'package:cashback/core/lang/language_manager.dart';
 import 'package:cashback/core/theme/app_theme.dart';
 import 'package:cashback/features/auth/notifiers/auth_controller.dart';
@@ -15,7 +16,7 @@ void main() {
   runApp(
     ProviderScope(
       child: LanguageManager(
-        child: const MyApp(),
+        child: const AppStartupWidget(),
       ),
     ),
   );
